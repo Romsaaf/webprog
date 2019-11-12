@@ -1,0 +1,42 @@
+    <section data-section="bready">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-heading text-center">
+                    <h2 class="animate-box"> Уже готовы к бою </h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <div class="box-services">
+                <div class="fh5co-post animate-box">
+                   <?php
+                    $json2 = json_decode($response);
+                    $arr = json_decode($response, true);
+                    $length = count($arr);
+                    $team_name = [];
+                    $team_mem_arr = [];
+                    foreach ($json2 as $obj){
+                        $team_name[$length-1] = $obj ->team_name;
+                        $length_mem = count($arr[$length-1]['team_memberArray']);
+                        for ($i = 0; $i < $length_mem; $i++){
+                            $team_mem_arr[$length-1] = $arr[$length-1]['team_memberArray'][$i];
+                        };
+                        $length--;
+                    }
+                    ?>
+                    <h3><?php
+                        $length_mem_now = count($team_name);
+                        for ($i = 0; $i < $length_mem_now; $i++){
+                            echo ($team_name[0]) ?></h3><br><p>
+                            <?php
+                            $length_curr_mem = count($team_mem_arr[$i]);
+                            for($j=0;$j < $length_curr_mem; $j++){
+                                echo $team_mem_arr[$i][$j];
+                            }
+                        }
+                   ?>
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>

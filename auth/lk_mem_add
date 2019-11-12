@@ -1,0 +1,216 @@
+
+<?php
+session_start();
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://ppp.spb.ru:1488/getAllCommands");
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+$json2 = json_decode($response);
+foreach ($json2 as $obj) {
+    for ($i = 1; $i <= 9; $i++)
+    {
+        if (isset($obj->stations[$i])) {
+            $done[$i] = 1;
+        }
+    }
+}
+?>
+
+<?php if ($_SESSION['id'] == 1)
+    {?>
+        <section id="fh5co-explore">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-heading text-center">
+                        <h2 class="animate-box">Станции</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="fh5co-project">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4" id="st1" >
+                            <div class="fh5co-portfolio animate-box">
+                                <div class="portfolio-entry">
+                                    <div id="hidd_st_1">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1QLtbE5bNXDe4xK-8icEJUL5AZScsD5J5" width="100%" height="100%"></iframe>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text text-center">
+                                    <h3>Станция 1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" id="st2" >
+                            <div class="fh5co-portfolio animate-box">
+                                <div class="portfolio-entry">
+                                    <div id="hidd_st_2">
+                                        <iframe src="https://www.google.com/maps/d/embed?mid=1MALJxVfhw3CdDFzKYwpoOAaJXJYFDwoc" width="100%" height="100%"></iframe>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text text-center">
+                                    <h3>Станция 2</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" id="st3" >
+                            <div class="fh5co-portfolio animate-box">
+                                <div class="portfolio-entry">
+                                    <div class="portfolio-entry">
+                                        <div id="hidd_st_3">
+                                            <iframe src="https://www.google.com/maps/d/embed?mid=1QLtbE5bNXDe4xK-8icEJUL5AZScsD5J5" width="100%" height="100%"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text text-center">
+                                    <h3>Станция 3</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" id="st4" >
+                            <div class="fh5co-portfolio animate-box">
+                                <div class="portfolio-entry">
+                                    <div class="portfolio-entry">
+                                        <div id="hidd_st_4">
+                                            <iframe src="https://www.google.com/maps/d/embed?mid=1QLtbE5bNXDe4xK-8icEJUL5AZScsD5J5" width="100%" height="100%"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text text-center">
+                                    <h3>Станция 4</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" id="st5" >
+                            <div class="fh5co-portfolio animate-box">
+                                <div class="portfolio-entry">
+                                    <div class="portfolio-entry">
+                                        <div id="hidd_st_5">
+                                            <iframe src="https://www.google.com/maps/d/embed?mid=1QLtbE5bNXDe4xK-8icEJUL5AZScsD5J5" width="100%" height="100%"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text text-center">
+                                    <h3>Станция 5</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" id="st6" >
+                            <div class="fh5co-portfolio animate-box">
+                                <div class="portfolio-entry">
+                                    <div class="portfolio-entry">
+                                        <div id="hidd_st_6">
+                                            <iframe src="https://www.google.com/maps/d/embed?mid=1QLtbE5bNXDe4xK-8icEJUL5AZScsD5J5" width="100%" height="100%"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text text-center">
+                                    <h3>Станция 6</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" id="st7" >
+                            <div class="fh5co-portfolio animate-box">
+                                <div class="portfolio-entry">
+                                    <div class="portfolio-entry">
+                                        <div id="hidd_st_7">
+                                            <iframe src="https://www.google.com/maps/d/embed?mid=1QLtbE5bNXDe4xK-8icEJUL5AZScsD5J5" width="100%" height="100%"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text text-center">
+                                    <h3>Станция 7</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" id="st8">
+                            <div class="fh5co-portfolio animate-box">
+                                <div class="portfolio-entry">
+                                    <div class="portfolio-entry">
+                                        <div id="hidd_st_8">
+                                            <iframe src="https://www.google.com/maps/d/embed?mid=1QLtbE5bNXDe4xK-8icEJUL5AZScsD5J5" width="100%" height="100%"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text text-center">
+                                    <h3>Станция 8</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" id="st9">
+                            <div class="fh5co-portfolio animate-box">
+                                <div class="portfolio-entry">
+                                    <div class="portfolio-entry">
+                                        <div id="hidd_st_9">
+                                            <iframe src="https://www.google.com/maps/d/embed?mid=1QLtbE5bNXDe4xK-8icEJUL5AZScsD5J5" width="100%" height="100%"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text text-center">
+                                    <h3>Станция 9</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php}
+    else { ?>
+
+    <?php } ?>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var DONE = new Array(9);
+            if ('<?php echo $done[1];?>' == 1)
+            {
+                DONE[1] = 1;
+            }
+            if ('<?php echo $done[2];?>' == 1)
+            {
+                DONE[2] = 1;
+            }
+            if ('<?php echo $done[3];?>' == 1)
+            {
+                DONE[3] = 1;
+            }
+            if ('<?php echo $done[4];?>' == 1)
+            {
+                DONE[4] = 1;
+            }
+            if ('<?php echo $done[5];?>' == 1)
+            {
+                DONE[5] = 1;
+            }
+            if ('<?php echo $done[6];?>' == 1)
+            {
+                DONE[6] = 1;
+            }
+            if ('<?php echo $done[7];?>' == 1)
+            {
+                DONE[7] = 1;
+            }
+            if ('<?php echo $done[8];?>' == 1)
+            {
+                DONE[8] = 1;
+            }
+            if ('<?php echo $done[9];?>' == 1)
+            {
+                DONE[9] = 1;
+            }
+
+            for (let i = 0; i < 10; i++)
+            {
+                if (DONE[i] == 1) {
+                    $('#' + 'hidd_st_' + i).fadeIn().show();
+                    return;
+                } else {
+                    $('#' + 'hidd_st_' + i).fadeOut(300);
+                }
+            }
+            });
+    </script>

@@ -1,0 +1,46 @@
+body,p,td,input,select {font-family:Verdana; font-size:12px}
+table, th, td {border-collapse:collapse; border-color:gray}
+table td {}
+.clear {clear:both}
+h1,h2,h3,h4 {margin:5px 0px}
+p {margin:0px}
+#smallForm .footer{
+    height: 20px;
+}
+#smallForm p{
+    color: #FFFADD;
+    font-family: pix;
+    font-size: 22px;
+}
+#smallForm h1{
+    color: #FFFADD;
+}
+#smallForm h3{
+    color: #FFFADD;
+}
+#smallForm{
+    background: rgba(0, 0, 0, 0.5)!important;
+}
+#form_text{
+    opacity: 1;
+}
+#smallForm input{
+    color: black;
+}
+
+textarea {width:100%}
+input[type='text'] {width:150px}
+input.short {width:50px}
+
+
+
+#smallForm, #bigForm {padding:3px; background-color:#F7F7F7; width:auto; border-radius:3px}
+.block1 {float:left; width:400px; margin-right:70px}
+.block2 {float:left; width:400px; margin-right:0px}
+
+code {color:#3333FF}
+
+.job {margin:5px 0px; padding:5px; background-color:#DDDDDD; border:1px solid #333333; border-radius:3px}
+.propList {background-color:#AAAAAA; padding:4px; margin:4px 0px; border-radius:3px}
+.materialList {background-color:#AAAAAA; padding:4px; margin:4px 0px; border-radius:3px} 
+.remark {font-style:italic; color:#5555FF}
